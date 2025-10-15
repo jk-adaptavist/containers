@@ -2,6 +2,9 @@
 
 ARG VERSION
 FROM docker.io/library/busybox:${VERSION}
+
+USER root
+
 RUN \
     apk add --no-cache \
         bash \
@@ -30,4 +33,5 @@ RUN case "$(dpkg --print-architecture)" in \
     rm -rf "influxdb2-client-${INFLUX_CLI_VERSION}-linux-${arch}.tar.gz" \
            "influxdb2-client-${INFLUX_CLI_VERSION}-linux-${arch}.tar.gz.asc" && \
     influx version    
-USER nobody:nogroup    
+    
+USER nobody:nogroup
