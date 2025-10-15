@@ -15,6 +15,8 @@ RUN \
         gnupg \
         tar \
     && rm -rf /tmp/*
+
+ENV INFLUX_CLI_VERSION 2.7.5
 # Install the influx CLI
 RUN set -eux; \
     ARCH="$(uname -m)"; \
