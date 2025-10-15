@@ -12,6 +12,8 @@ RUN \
         curl \
         jq \
         tzdata \
+        gnupg \
+        tar \
     && rm -rf /tmp/*
 # Install the influx CLI
 ENV INFLUX_CLI_VERSION 2.7.5
