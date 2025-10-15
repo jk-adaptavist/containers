@@ -27,7 +27,7 @@ RUN set -eux; \
     esac; \
     wget -O influx.tar.gz "https://dl.influxdata.com/influxdb/releases/influxdb2-client-${INFLUX_CLI_VERSION}-linux-${CLI_ARCH}.tar.gz"; \
     tar -xzf influx.tar.gz; \
-    mv influxdb2-client-${INFLUX_CLI_VERSION}-linux-${CLI_ARCH}/influx /usr/local/bin/; \
+    mv influx/influx /usr/local/bin/; \
     rm -rf influx.tar.gz influxdb2-client-${INFLUX_CLI_VERSION}-linux-${CLI_ARCH}
     
 USER nobody:nogroup
